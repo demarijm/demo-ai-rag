@@ -1,11 +1,15 @@
+# nixpacks.toml
+
 [phases.setup]
+# Force Node.js 20
 nodejs = "20"
+# Force NPM 9 (optional). If not specified, it usually picks the matching npm from Node 20
+npm = "9"
 
 [phases.install]
-# Include build dependencies for node-gyp
 nixPkgs = [
   "python3",
-  "gnumake",  # or "make" in some Nix channels
+  "gnumake",  # or "make" in some channels
   "gcc",
   "g++"
 ]
