@@ -1,0 +1,11 @@
+[phases.setup]
+nodejs = "20"
+
+[phases.install]
+# Include build dependencies for node-gyp
+nixPkgs = [
+  "python3",
+  "gnumake",  # or "make" in some Nix channels
+  "gcc",
+  "g++"
+]
